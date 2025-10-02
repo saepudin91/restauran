@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* 1. Hapus atau Komentari Blok @media (prefers-color-scheme: dark) */
+/* Blok ini adalah yang membalik warna menjadi latar belakang gelap. */
+
+:root {
+  /* Set latar belakang default ke warna terang */
+  --background: #f7f7f7;
+  /* Abu-abu muda */
+  --foreground: #171717;
+  /* Hitam gelap untuk teks */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  /* Biarkan font tetap ada */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* @media (prefers-color-scheme: dark) { 
+    :root { 
+      --background: #0a0a0a; 
+      --foreground: #ededed; 
+    } 
+  }
+*/
+
+/* 2. Aplikasikan Background dan Warna Teks ke body */
+body {
+  /* Hapus font-family dan gunakan tema Tailwind untuk Geist jika Anda menggunakan Geist */
+
+  /* Gunakan variabel yang sudah di-set ke warna terang */
+  background-color: var(--background);
+  color: var(--foreground);
+
+  /* Jika Anda menggunakan Geist Font, ini bisa dihapus atau dipertahankan */
+  font-family: Arial, Helvetica, sans-serif;
+}
